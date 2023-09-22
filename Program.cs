@@ -1,8 +1,5 @@
 using Application.Data;
-using Application.Repository;
-using Application.Service;
 using Microsoft.EntityFrameworkCore;
-using Ninject;
 
 var builder = WebApplication.CreateBuilder(args);
 // var kernel = new StandardKernel();
@@ -11,9 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // kernel.Bind<ICourseService>().To<CourseService>();
 // kernel.Bind<IStudentService>().To<StudentService>();
 
-builder.Services.AddTransient<IStudentService, StudentService>();
-builder.Services.AddTransient<ICourseService, CourseService>();
-builder.Services.AddTransient<IClassService, ClassService>();
+
 builder.Services.AddHttpContextAccessor();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??

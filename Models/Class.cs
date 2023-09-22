@@ -13,9 +13,8 @@ public class Class
     {
     }
 
-    public Class(string name, List<Student> students)
+    public Class(string name)
     {
         Name = name;
-        Students = students;
     }
 }

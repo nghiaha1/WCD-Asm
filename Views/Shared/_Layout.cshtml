@@ -7,43 +7,95 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Application.styles.css" asp-append-version="true"/>
+
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- NProgress -->
+    <link href="~/lib/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/lib/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="~/lib/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="~/lib/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/lib/bootstrap-daterangepicker/daterangepicker.css" rel="stfylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="./css/custom.min.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Application</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+@* <header> *@
+@*     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> *@
+@*         <div class="container-fluid"> *@
+@*             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Application</a> *@
+@*             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" *@
+@*                     aria-expanded="false" aria-label="Toggle navigation"> *@
+@*                 <span class="navbar-toggler-icon"></span> *@
+@*             </button> *@
+@*             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between"> *@
+@*                 <ul class="navbar-nav flex-grow-1"> *@
+@*                     <li class="nav-item"> *@
+@*                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+@*                     </li> *@
+@*                     <li class="nav-item"> *@
+@*                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+@*                     </li> *@
+@*                 </ul> *@
+@*             </div> *@
+@*         </div> *@
+@*     </nav> *@
+@* </header> *@
 <div class="container">
-    <main role="main" class="pb-3">
+    <main role="main">
         @RenderBody()
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2023 - Application - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-</footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<!-- jQuery -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FastClick -->
+<script src="~/lib/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="~/lib/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="~/lib/Chart.js/dist/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="~/lib/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="~/lib/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="~/lib/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="~/lib/skycons/skycons.js"></script>
+<!-- Flot -->
+<script src="~/lib/Flot/jquery.flot.js"></script>
+<script src="~/lib/Flot/jquery.flot.pie.js"></script>
+<script src="~/lib/Flot/jquery.flot.time.js"></script>
+<script src="~/lib/Flot/jquery.flot.stack.js"></script>
+<script src="~/lib/Flot/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="~/lib/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="~/lib/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="~/lib/flot.curvedlines/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="~/lib/DateJS/build/date.js"></script>
+<!-- JQVMap -->
+<script src="~/lib/jqvmap/dist/jquery.vmap.js"></script>
+<script src="~/lib/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="~/lib/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="~/lib/moment/min/moment.min.js"></script>
+<script src="~/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="./js/custom.min.js"></script>
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

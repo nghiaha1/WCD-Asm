@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Application.Data;
 using Application.Models;
+using Application.Seeds;
 
 namespace Application.Controllers
-{
+{   
     public class StudentController : Controller
     {
         private readonly DatabaseContext _context;
@@ -17,20 +18,19 @@ namespace Application.Controllers
         public StudentController(DatabaseContext context)
         {
             _context = context;
+            // MockDataRepository.Seeding();
         }
 
         // GET: Student
         public async Task<IActionResult> Index()
         {
-              return _context._students != null ? 
-                          View(await _context._students.ToListAsync()) :
-                          Problem("Entity set 'DatabaseContext._students'  is null.");
+              return View(await _context._students.ToListAsync());
         }
 
         // GET: Student/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(string? id)
         {
-            if (id == null || _context._students == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -68,9 +68,9 @@ namespace Application.Controllers
         }
 
         // GET: Student/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string? id)
         {
-            if (id == null || _context._students == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -119,9 +119,9 @@ namespace Application.Controllers
         }
 
         // GET: Student/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(string? id)
         {
-            if (id == null || _context._students == null)
+            if (id == null)
             {
                 return NotFound();
             }
@@ -141,10 +141,6 @@ namespace Application.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context._students == null)
-            {
-                return Problem("Entity set 'DatabaseContext._students'  is null.");
-            }
             var student = await _context._students.FindAsync(id);
             if (student != null)
             {

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nghiaha/RiderProjects/mvc/S-Assignment/Application/Application.csproj": {}
+    "E:\\WCD\\WCD-Asm\\Application.csproj": {}
   },
   "projects": {
-    "/Users/nghiaha/RiderProjects/mvc/S-Assignment/Application/Application.csproj": {
+    "E:\\WCD\\WCD-Asm\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nghiaha/RiderProjects/mvc/S-Assignment/Application/Application.csproj",
+        "projectUniqueName": "E:\\WCD\\WCD-Asm\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/nghiaha/RiderProjects/mvc/S-Assignment/Application/Application.csproj",
-        "packagesPath": "/Users/nghiaha/.nuget/packages/",
-        "outputPath": "/Users/nghiaha/RiderProjects/mvc/S-Assignment/Application/obj/",
+        "projectPath": "E:\\WCD\\WCD-Asm\\Application.csproj",
+        "packagesPath": "C:\\Users\\maxxm\\.nuget\\packages\\",
+        "outputPath": "E:\\WCD\\WCD-Asm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nghiaha/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\maxxm\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Faker.Net": {
+              "target": "Package",
+              "version": "[2.0.154, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -72,6 +74,10 @@
               "target": "Package",
               "version": "[3.3.6, )"
             },
+            "RimuTec.Faker": {
+              "target": "Package",
+              "version": "[1.11.0, )"
+            },
             "Unity": {
               "target": "Package",
               "version": "[5.11.10, )"
@@ -96,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
